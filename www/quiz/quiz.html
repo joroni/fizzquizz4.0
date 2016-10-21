@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TEST</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+
+ <style>
+li{
+  width:200px;
+  list-style: none;
+}
+
+#qt_content_1{
+  position: relative;
+  left: -350px;
+}
+ </style>
+
+
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+
+  <script>
+  $('#loader').hide();
+  //set user
+  localStorage.setItem("userlogin", "Smith");
+  localStorage.setItem("userlogin_id", Math.random());
+  var user = localStorage.getItem("userlogin");
+  var user_id = localStorage.getItem("userlogin_id");
+
+
+
+  </script>
+
+    <script>
+  $( function() {
+    $( "#accordion" ).accordion({
+      heightStyle: "fill"
+    });
+ 
+    $( "#accordion-resizer" ).resizable({
+      minHeight: 140,
+      minWidth: 200,
+      resize: function() {
+        $( "#accordion" ).accordion( "refresh" );
+      }
+    });
+  } );
+  </script>
+  <script src="qt1.js"></script>
+  <script src="qt2.js"></script>
+  <script src="qt3.js"></script>
+  <script src="qt4.js"></script>
+  <script src="qt5.js"></script>
+</head>
+<body>
+
+
+<h1 id='user_name' ></h1>
+<br>
+<div id="accordion">
+
+
+
+
+  <h3 id='qt1'>Section 1</h3>
+  <div >
+  <div id='qt_content_1'>
+    <span id='loader1'><center><img src='default.gif'></center></span>
+    <p id='qt_1_qt'></p>
+    <hr>
+    <ul id='qt1_li'>
+      <li><input type='radio' name='qt1' value='1' id='in_qt1_1' onclick="process1('qt1_ans_1');"> <label for='in_qt1_1'><span id='qt1_1'></span></label></li>
+      <li><input type='radio' name='qt1' value='2' id='in_qt1_2' onclick="process1('qt1_ans_2');"> <label for='in_qt1_2'><span id='qt1_2'></span></label></li>
+      <li><input type='radio' name='qt1' value='3' id='in_qt1_3' onclick="process1('qt1_ans_3');"> <label for='in_qt1_3'><span id='qt1_3'></span></label></li>
+      <li><input type='radio' name='qt1' value='4' id='in_qt1_4' onclick="process1('qt1_ans_4');"> <label for='in_qt1_4'><span id='qt1_4'></span></label></li>
+      <li id='qt1_result'></li>
+    </ul>
+  </div>
+  </div>
+
+
+
+
+    <h3 class='ui-state-disabled' id='qt2'>Section 2</h3>
+    <div >
+    <div id='qt_content_2' >
+      <span id='loader2'><center><img src='default.gif'></center></span>
+      <p id='qt_2_qt'></p>
+      <hr>
+      <ul>
+        <li><input type='radio' name='qt2' value='1' id='in_qt2_1' onclick="process2('qt2_ans_1');"> <label for='in_qt2_1'><span id='qt2_1'></span></label></li>
+        <li><input type='radio' name='qt2' value='2' id='in_qt2_2' onclick="process2('qt2_ans_2');"> <label for='in_qt2_2'><span id='qt2_2'></span></label></li>
+        <li><input type='radio' name='qt2' value='3' id='in_qt2_3' onclick="process2('qt2_ans_3');"> <label for='in_qt2_3'><span id='qt2_3'></span></label></li>
+        <li><input type='radio' name='qt2' value='4' id='in_qt2_4' onclick="process2('qt2_ans_4');"> <label for='in_qt2_4'><span id='qt2_4'></span></label></li>
+        <li id='qt2_result'></li>
+      </ul>
+    </div>
+    </div>
+
+
+
+  <h3 class='ui-state-disabled' id='qt3'>Section 3</h3>
+    <div >
+    <div id='qt_content_3' >
+      <span id='loader3'><center><img src='default.gif'></center></span>
+      <p id='qt_3_qt'></p>
+      <hr>
+      <ul>
+        <li><input type='radio' name='qt3' value='1' id='in_qt3_1' onclick="process3('qt3_ans_1');"> <label for='in_qt3_1'><span id='qt3_1'></span></label></li>
+        <li><input type='radio' name='qt3' value='2' id='in_qt3_2' onclick="process3('qt3_ans_2');"> <label for='in_qt3_2'><span id='qt3_2'></span></label></li>
+        <li><input type='radio' name='qt3' value='3' id='in_qt3_3' onclick="process3('qt3_ans_3');"> <label for='in_qt3_3'><span id='qt3_3'></span></label></li>
+        <li><input type='radio' name='qt3' value='4' id='in_qt3_4' onclick="process3('qt3_ans_4');"> <label for='in_qt3_4'><span id='qt3_4'></span></label></li>
+        <li id='qt3_result'></li>
+      </ul>
+    </div>
+    </div>
+
+
+  <h3 class='ui-state-disabled' id='qt4'>Section 4</h3>
+    <div >
+    <div id='qt_content_4' >
+      <span id='loader4'><center><img src='default.gif'></center></span>
+      <p id='qt_4_qt'></p>
+      <hr>
+      <ul>
+        <li><input type='radio' name='qt4' value='1' id='in_qt4_1' onclick="process4('qt4_ans_1');"> <label for='in_qt4_1'><span id='qt4_1'></span></label></li>
+        <li><input type='radio' name='qt4' value='2' id='in_qt4_2' onclick="process4('qt4_ans_2');"> <label for='in_qt4_2'><span id='qt4_2'></span></label></li>
+        <li><input type='radio' name='qt4' value='3' id='in_qt4_3' onclick="process4('qt4_ans_3');"> <label for='in_qt4_3'><span id='qt4_3'></span></label></li>
+        <li><input type='radio' name='qt4' value='4' id='in_qt4_4' onclick="process4('qt4_ans_4');"> <label for='in_qt4_4'><span id='qt4_4'></span></label></li>
+        <li id='qt4_result'></li>
+      </ul>
+    </div>
+    </div>
+
+    <h3 class='ui-state-disabled' id='qt5'>Section 5</h3>
+    <div >
+    <div id='qt_content_5' >
+      <span id='loader5'><center><img src='default.gif'></center></span>
+      <p id='qt_5_qt'></p>
+      <hr>
+      <ul>
+        <li><input type='radio' name='qt5' value='1' id='in_qt5_1' onclick="process5('qt5_ans_1');"> <label for='in_qt5_1'><span id='qt5_1'></span></label></li>
+        <li><input type='radio' name='qt5' value='2' id='in_qt5_2' onclick="process5('qt5_ans_2');"> <label for='in_qt5_2'><span id='qt5_2'></span></label></li>
+        <li><input type='radio' name='qt5' value='3' id='in_qt5_3' onclick="process5('qt5_ans_3');"> <label for='in_qt5_3'><span id='qt5_3'></span></label></li>
+        <li><input type='radio' name='qt5' value='4' id='in_qt5_4' onclick="process5('qt5_ans_4');"> <label for='in_qt5_4'><span id='qt5_4'></span></label></li>
+        <li id='qt5_result'></li>
+      </ul>
+    </div>
+    <hr>
+    <div style='display:none;' id='show_ans_total'>Total correct answer: <span id='total_ans'></span></div>
+    </div>
+
+</div>
+
+
+
+
+
+</body>
+</html>
